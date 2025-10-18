@@ -3,7 +3,53 @@
 \usepackage{braket} % For Dirac notation
 \usepackage{graphicx}
 \usepackage{quantikz}
+\usepackage{hyperref}
 \usepackage{cleveref}
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\usepackage{siunitx}
+\usepackage{pgf}
+\usepackage{subcaption}
+\usepackage{float}
+
+\geometry{a4paper, margin=1in}
+\def\mathdefault#1{#1}
+
+\definecolor{codegray}{rgb}{0.9,0.9,0.9}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
+\lstset{
+  language=Python,                     % evidenziazione sintassi simile a Python
+  basicstyle=\ttfamily\footnotesize,  % font più piccolo
+  keywordstyle=\color{blue},          % stile per le parole chiave
+  commentstyle=\color{gray},          % stile per i commenti
+  stringstyle=\color{orange},         % stile per le stringhe
+  breaklines=true,                    % manda a capo le righe lunghe
+  breakatwhitespace=false,            % va a capo anche nel mezzo delle parole
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}, % simbolo dopo l'andata a capo
+  frame=single,                       % riquadro attorno al codice
+  rulecolor=\color{black},            % colore del bordo del riquadro
+  captionpos=b,                       % posizione della didascalia in basso
+  numbers=none,                       % niente numeri di riga
+  numberstyle=\tiny\color{gray},      % stile dei numeri di riga (se attivati)
+  numbersep=5pt,                      % distanza numeri-codice (se attivati)
+  stepnumber=2,                       % numerazione ogni 2 righe (se attivati)
+  firstnumber=1000,                   % inizia la numerazione da 1000
+  xleftmargin=15pt,                   % margine sinistro
+  keepspaces=true,                    % conserva spazi e indentazioni
+  showspaces=false,                   % non mostra simboli per spazi
+  showstringspaces=false,            % non sottolinea gli spazi nelle stringhe
+  showtabs=false,                     % non mostra simboli per tab
+  escapeinside={\%*}{*)},             % per inserire comandi LaTeX nel codice
+  morekeywords={*,...},              % aggiunta di ulteriori parole chiave
+  deletekeywords={...},              % rimozione di parole chiave predefinite
+  backgroundcolor=\color{bg},        % colore di sfondo personalizzato
+  title=\lstname                      % mostra il nome del file incluso (se usato)
+}
 
 \title{%
   {\Huge Quantum Hardware Design and Optimization} \\[0.5cm]
