@@ -1,3 +1,6 @@
+\subsection{qiskit and OpenQASM}
+Even though the two circuits appear different, they are equivalent because the part of the second circuit that contains a CNOT gate surrounded by Hadamard gates is mathematically equivalent to a controlled-$Z$ gate. Since this transformation does not change the overall effect of the circuit on the qubits, both circuits perform the same computation and therefore produce the same final state and the same measurement result, as shown below.
+
 \begin{lstlisting}[language=Python, caption={Qiskit code}, label={lst:qiskit-circuit}]
 import qiskit
 from qiskit import QuantumCircuit, transpile
@@ -102,3 +105,10 @@ h q[1];
 c[0] = measure q[0];
 c[1] = measure q[1];
 \end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/histograms.png}
+    \caption{output histogram}
+    \label{fig:output histogram}
+\end{figure}
