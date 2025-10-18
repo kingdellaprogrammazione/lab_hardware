@@ -11,7 +11,22 @@ Since we have that
 \end{equation}
 The circuit is equivalent to the one we analyzed in section ... 
 
-The demonstration is as follow:
-
-
+The demonstration is as follow: we check the action on a basis set: 
+\begin{equation}
+    \ket{0+}, \ket{0-}, \ket{1+}, \ket{1-}.
+\end{equation}
+The states with the control qubit set to $\ket{0}$ are unaltered, since $HH=I$, like in the $CZ_{1\to2}$. 
+When the control qubit is set to $\ket{1}$, we have:
+\begin{align}
+    \ket{1+} \to \ket{1-} \\
+    \ket{1-}  \to \ket{1+}.
+\end{align}
+Summarizing, te full action is:
+\begin{align}
+    \ket{0+} \to \ket{0+} \\
+    \ket{0-}  \to \ket{0-} \\
+    \ket{1+} \to \ket{1-} \\
+    \ket{1-}  \to \ket{1+}.
+\end{align}
+And this is the exact action of the $CZ_{1 \to 2}$ gate in the circuit before.
 
